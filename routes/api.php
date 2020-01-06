@@ -41,3 +41,4 @@ use Illuminate\Http\Request;
     //Sellers
     Route::apiResource('sellers', 'Seller\SellerController');
 
+    //Auth::routes(['verify' => true]);
