@@ -36,7 +36,7 @@ use Illuminate\Http\Request;
     Route::apiResource('transactions', 'Transaction\TransactionController')->only(['index','show']);
 
     //Users
-    Route::apiResource('users', 'User\UserController')->only(['index','show']);
+    Route::apiResource('users', 'User\UserController');
 
     //Sellers
     Route::apiResource('sellers', 'Seller\SellerController');
