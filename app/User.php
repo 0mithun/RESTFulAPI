@@ -45,6 +45,22 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function setNameAttribute($value){
+        $this->attributes['name'] = strtolower($value);
+    }
+
+    public function getNameAttribute($name){
+        return ucwords($name);
+    }
+
+    public function getEmailAttributes($value)
+    {
+        $this->attributes['email'] = strtolower($value);
+    }
+
+    
+
+
     public function isVerified(){
         return $this->verified == User::VERIFIED_USER;
     }

@@ -27,9 +27,9 @@ class DatabaseSeeder extends Seeder
         // Transaction::turncate();
         // DB::table('category_product')->turncate();
 
-        $userQuantity = 20;
+        $userQuantity = 200;
         $categoryQuantity = 30;
-        $productQuantity = 200;
+        $productQuantity = 2000;
         $transactionQuantity = 50;
 
         
