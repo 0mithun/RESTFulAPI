@@ -26,7 +26,7 @@ use Illuminate\Http\Request;
 
 
     //Categories
-    Route::apiResource('categories', 'Category\CategoryController');
+    Route::apiResource('categories', 'Category\CategoryController')->except(['create','edit']);
 
 
     //Products
