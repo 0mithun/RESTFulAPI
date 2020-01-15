@@ -10,7 +10,8 @@ class Product extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-
+    protected $hidden = ['pivot'];
+    
     const AVAILABLE_PRODUCT = 'available';
     const UNAVAILABLE_PRODUCT = 'unavailable';
     protected $fillable = [
@@ -38,7 +39,7 @@ class Product extends Model
         return $this->belongsTo(Seller::class);
     }
 
-    public function transaction(){
+    public function transactions(){
         return $this->hasMany(Transaction::class);
     }
 }   

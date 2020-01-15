@@ -9,6 +9,8 @@ class Category extends Model
 {
     use SoftDeletes;
 
+    protected $hidden = ['pivot'];
+
     protected $dates = ['deleted_at'];
     protected $fillable = [
         'name',
