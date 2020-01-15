@@ -14,8 +14,8 @@ class User extends Authenticatable
     protected $dates = ['deleted_at'];
 
 
-    const VERIFIED_USER = '1';
-    const UNVERIFIED_USER = '0';
+    const VERIFIED_USER = 'true';
+    const UNVERIFIED_USER = 'false';
 
     const ADMIN_USER = 'true';
     const REGULAR_USER = 'false';
