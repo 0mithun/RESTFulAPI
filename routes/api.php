@@ -50,5 +50,9 @@ use Illuminate\Http\Request;
 
     //Sellers
     Route::apiResource('sellers', 'Seller\SellerController');
+    Route::apiResource('sellers.transactions', 'Seller\SellerTransactionController')->only(['index']);
+    Route::apiResource('sellers.categories', 'Seller\SellerCategoryController')->only(['index']);
+    Route::apiResource('sellers.buyers', 'Seller\SellerBuyerController')->only(['index']);
+    Route::apiResource('sellers.products', 'Seller\SellerProductController')->except(['create','show','edit']);
 
     //Auth::routes(['verify' => true]);
