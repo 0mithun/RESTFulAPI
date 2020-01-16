@@ -17,14 +17,18 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(User::class, function (Faker $faker) {
+    $verified = $faker->randomElement([User::UNVERIFIED_USER, User::VERIFIED_USER]);
+    //$verified = false;
+    $token = ($verified == User::VERIFIED_USER) ? null : User::generateVerificationCode();
+    //$token = User::generateVerificationCode();
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
-        'verified' =>   $verified = $faker->randomElement([User::UNVERIFIED_USER, User::VERIFIED_USER]),
-        'verification_token'    =>  $verified == User::VERIFIED_USER ? null : User::generateVerificationCode(),
+        'verified' =>   $verified,
+        'verification_token'    =>  $token,
         'admin' => $verified = $faker->randomElement([User::ADMIN_USER, User::REGULAR_USER])
 
 

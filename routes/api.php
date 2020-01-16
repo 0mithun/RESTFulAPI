@@ -51,7 +51,8 @@ use Illuminate\Http\Request;
 
     //Users
     Route::apiResource('users', 'User\UserController');
-
+    Route::get('users/verify/{token}','User\UserController@verify')->name('verify');
+    Route::get('users/{user}/resend','User\UserController@resend')->name('resend');
     //Sellers
     Route::apiResource('sellers', 'Seller\SellerController');
     Route::apiResource('sellers.transactions', 'Seller\SellerTransactionController')->only(['index']);

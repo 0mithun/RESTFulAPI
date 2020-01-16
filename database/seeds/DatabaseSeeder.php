@@ -19,13 +19,18 @@ class DatabaseSeeder extends Seeder
     {
          //$this->call(UsersTableSeeder::class);
 
-        //DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
 
-        //User::turncate();
-        // Category::turncate();
-        // Product::turncate();
-        // Transaction::turncate();
-        // DB::table('category_product')->turncate();
+        User::truncate();
+        Category::truncate();
+        Product::truncate();
+        Transaction::truncate();
+        DB::table('category_product')->truncate();
+
+        User::flushEventListeners();
+        Category::flushEventListeners();
+        Product::flushEventListeners();
+        Transaction::flushEventListeners();
 
         $userQuantity = 200;
         $categoryQuantity = 30;
