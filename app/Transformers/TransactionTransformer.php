@@ -40,4 +40,18 @@ class TransactionTransformer extends TransformerAbstract
             'create_date'   => (string) $transaction->created_at,
         ];
     }
+
+    public static function originalAttribute($index)
+    {
+        $attributes = [
+            'identifier'    =>  'id',
+            'quantity'      =>  'quantity',
+            'email'         =>  'email',
+            'buyer'         =>  'buyer_id',
+            'product'       =>  'product_id',
+            'create_date'   =>  'created_at',
+        ];
+
+        return isset($attributes[$index]) ? $attributes[$index] : null;
+    }
 }
