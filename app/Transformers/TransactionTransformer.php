@@ -53,11 +53,11 @@ class TransactionTransformer extends TransformerAbstract
                 ],
                 [
                     'rel'       =>  'buyer',
-                    'href'      =>  route('buyer.show', $transaction->buyer_id)
+                    'href'      =>  route('buyers.show', $transaction->buyer_id)
                 ],
                 [
                     'rel'       =>  'product',
-                    'href'      =>  route('product.show', $transaction->product_id)
+                    'href'      =>  route('products.show', $transaction->product_id)
                 ],
             ]
         ];
