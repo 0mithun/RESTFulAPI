@@ -15,6 +15,10 @@ class CategoryBuyerController extends ApiController
      */
     public function index(Category $category)
     {
+        public function __construct() {
+            parent::__construct();
+            
+        }
         $buyers = $category->products()
             ->whereHas('transactions')
             ->with('transactions.buyer')

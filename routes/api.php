@@ -61,3 +61,5 @@ use Illuminate\Http\Request;
     Route::apiResource('sellers.products', 'Seller\SellerProductController')->except(['create','show','edit']);
 
     //Auth::routes(['verify' => true]);
+
+    Route::post('oauth/token','\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
