@@ -77,6 +77,7 @@ class ProductTransformer extends TransformerAbstract
             'stock'          =>  'quantity',
             'situation'      =>  'status',
             'seller'         =>  'seller_id',
+            'picture'         =>  'image',
             'create_date'    =>  'created_at',
             'last_change'    =>  'updated_at',
             'delete_date'    =>  'deleted_at'
@@ -94,6 +95,7 @@ class ProductTransformer extends TransformerAbstract
             'quantity'    =>  'stock'      ,
             'status'    =>  'situation'  ,
             'seller_id'    =>  'seller'     ,
+            'image'    =>  'picture'     ,
             'created_at'    =>  'create_date',
             'updated_at'    =>  'last_change',
             'deleted_at'    =>  'delete_date',
