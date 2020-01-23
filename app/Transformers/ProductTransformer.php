@@ -76,8 +76,8 @@ class ProductTransformer extends TransformerAbstract
             'detail'         =>  'description',
             'stock'          =>  'quantity',
             'situation'      =>  'status',
+            'picture'        =>  'image',
             'seller'         =>  'seller_id',
-            'picture'         =>  'image',
             'create_date'    =>  'created_at',
             'last_change'    =>  'updated_at',
             'delete_date'    =>  'deleted_at'
@@ -89,13 +89,13 @@ class ProductTransformer extends TransformerAbstract
     public static function transformedAttribute($index)
     {
         $attributes = [
-            'id'    =>  'identifier' ,
-            'name'    =>  'title'      ,
-            'description'    =>  'detail'     ,
-            'quantity'    =>  'stock'      ,
-            'status'    =>  'situation'  ,
-            'seller_id'    =>  'seller'     ,
-            'image'    =>  'picture'     ,
+            'id'            =>  'identifier' ,
+            'name'          =>  'title'      ,
+            'description'   =>  'detail'     ,
+            'quantity'      =>  'stock'      ,
+            'status'        =>  'situation'  ,
+            'seller_id'     =>  'seller'     ,
+            'image'         =>  'picture'     ,
             'created_at'    =>  'create_date',
             'updated_at'    =>  'last_change',
             'deleted_at'    =>  'delete_date',
