@@ -105,7 +105,7 @@ class UserController extends ApiController
 
         if($request->has('admin')){
             $this->allowedAdminAction();
-
+            
             if(!$user->isVerified()){
                 return  $this->errorResponse('Only verified user can modify the admin field', 409);
             }
@@ -161,5 +161,10 @@ class UserController extends ApiController
         }, 500);
 
         return $this->showMessage('The verification email has been resent');
+    }
+
+    public function me(Request $request){
+        $user = $request->user();
+        return $this->showOne($user);
     }
 }
